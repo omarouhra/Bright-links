@@ -67,7 +67,16 @@ const Home = () => {
         </div>
       </main>
 
-      <footer></footer>
+      <footer className="mx-auto  max-w-[1600px] space-y-12 px-5 py-12 text-center ">
+        <p className="italic text-[#DF6F1F]		">
+          This app is for the sake of{" "}
+          <span className="font-semibold">Allah</span> and the Good of the
+          Ummah!
+        </p>
+        <div className="grayscale">
+          <Logo />
+        </div>
+      </footer>
     </div>
   );
 };
