@@ -63,7 +63,7 @@ const Home = ({ resources }: { resources: TResource[] }) => {
         </section>
 
         <section className="">
-          <div className="inner-container flex items-center justify-center py-10 px-5">
+          <div className="inner-container flex flex-col items-center space-y-5 py-10 px-5 md:justify-center">
             {resources?.map((props) => (
               <ResourceCard {...props} key={props.id} />
             ))}
@@ -86,12 +86,13 @@ const Home = ({ resources }: { resources: TResource[] }) => {
         </section>
       </main>
 
-      <footer className="mx-auto  max-w-[1600px] space-y-12 px-5 py-12 text-center ">
-        <p className="italic text-[#DF6F1F]		">
+      <footer className="mx-auto  max-w-[1600px] space-y-12 px-5 py-12 text-center">
+        <p className="italic text-[#DF6F1F]">
           This app is for the sake of{" "}
           <span className="font-semibold">Allah</span> and the Good of the
           Ummah!
         </p>
+
         <div className="grayscale">
           <Logo />
         </div>
