@@ -1,21 +1,6 @@
+import Logo from "@/components/Logo";
+import LogoMask from "@/Icon/logoMask";
 import { ButtonHTMLAttributes, DetailedHTMLProps, useState } from "react";
-
-type Props = DetailedHTMLProps<
-  ButtonHTMLAttributes<HTMLButtonElement>,
-  HTMLButtonElement
-> & { isActive?: boolean; text: string };
-
-const Box = ({ isActive = false, text, ...rest }: Props) => {
-  const boxClassName = `text-xl font-semibold rounded-[0.312rem] inline-flex py-2.5 px-[3.437rem] ${
-    isActive ? "bg-[#E58538] text-white" : "bg-[#EAEAEA] text-[#8A8A8A]"
-  }`;
-
-  return (
-    <button className={boxClassName} {...rest}>
-      {text}
-    </button>
-  );
-};
 
 const Home = () => {
   const [activeBox, setActiveBox] = useState<
@@ -23,51 +8,49 @@ const Home = () => {
   >("Videos");
 
   return (
-    <>
-      <main>
-        <section className="flex flex-col items-center justify-center text-center">
-          <div className="space-y-[3.125rem]">
-            <div className="space-y-5">
-              <h1 className="text-[2.5rem] font-medium">
-                Your golden library of{" "}
-                <span className="bg-gradient-to-r from-[#DF6F1F] to-[#FFE5A4] bg-clip-text font-bold text-transparent">
-                  Islamic
-                </span>{" "}
-                resources
-              </h1>
-
-              <p className="text-lg">
-                Brighter path, is an app where you can find different resources
-                to learn more about your deen!
-              </p>
-            </div>
-
-            <div className="flex items-center space-x-8">
-              <Box
-                text="Videos"
-                isActive={activeBox === "Videos"}
-                onClick={() => setActiveBox("Videos")}
-              />
-              <Box
-                text="Websites"
-                isActive={activeBox === "Websites"}
-                onClick={() => setActiveBox("Websites")}
-              />
-              <Box
-                text="Apps"
-                isActive={activeBox === "Apps"}
-                onClick={() => setActiveBox("Apps")}
-              />
-              <Box
-                text="Podcasts"
-                isActive={activeBox === "Podcasts"}
-                onClick={() => setActiveBox("Podcasts")}
-              />
-            </div>
+    <div>
+      <section className="bg-[#EEEEEE] px-5">
+        <div className="relative mx-auto max-w-[1600px]">
+          <div className="invisible absolute top-0 -right-1/3  opacity-40 lg:right-0 xl:visible">
+            <LogoMask />
           </div>
-        </section>
-      </main>
-    </>
+          <header className=" flex  items-start py-12  ">
+            <Logo />
+          </header>
+          <section>
+            <div className="flex flex-col items-start justify-center py-8 md:py-16 ">
+              <div className="py- space-y-[3.125rem]">
+                <div className="space-y-5">
+                  <h1 className="max-w-2xl text-4xl font-light leading-relaxed md:text-6xl md:leading-normal">
+                    Your golden library of{" "}
+                    <span className="bg-gradient-to-r from-[#DF6F1F] to-[#FFE5A4] bg-clip-text font-bold text-transparent">
+                      Islamic
+                    </span>{" "}
+                    resources
+                  </h1>
+                  <p className="max-w-2xl text-base font-light text-gray-800 md:text-lg">
+                    Brighter path, is an app where you can find different
+                    resources to learn more about your deen!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="mt-12 flex space-x-8 text-base font-normal md:space-x-12 md:text-xl">
+              <button className="bordrer-b border-b-2  border-[#DF6F1F] py-2">
+                Videos
+              </button>
+              <button className="py-2">Websites</button>
+              <button className="py-2">Apps</button>
+              <button className="py-2">Poadcast</button>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <main></main>
+
+      <footer></footer>
+    </div>
   );
 };
 
