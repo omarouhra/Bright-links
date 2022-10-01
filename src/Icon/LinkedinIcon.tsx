@@ -6,7 +6,7 @@ function LinkedinIcon() {
       width="30"
       height="30"
       viewBox="0 0 21 21"
-      className="fill-[#7D7D7D] hover:fill-[#0A66C2]"
+      className="fill-[#7D7D7D] hover:fill-[#DF6F1F]"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
