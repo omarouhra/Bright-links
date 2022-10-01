@@ -1,4 +1,5 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps, useState } from "react";
+import { createClient } from "@supabase/supabase-js";
 
 type Props = DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
@@ -69,6 +70,20 @@ const Home = () => {
       </main>
     </>
   );
+};
+
+export const getStaticProps = async () => {
+  const supabaseAdmin = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL || "",
+    process.env.SUPABASE_SERVICE_ROLE_KEY || ""
+  );
+
+  const { data } = await supabaseAdmin
+    .from("resources")
+    .select("*")
+    .order("id");
+
+  return { props: { resources: data } };
 };
 
 export default Home;
