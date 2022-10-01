@@ -1,4 +1,9 @@
 import Logo from "@/components/Logo";
+import {
+  GithubRepository,
+  LinkedinShare,
+  TwitterShare,
+} from "@/components/Share";
 import LogoMask from "@/Icon/logoMask";
 import { ButtonHTMLAttributes, DetailedHTMLProps, useState } from "react";
 
@@ -47,7 +52,19 @@ const Home = () => {
         </div>
       </section>
 
-      <main></main>
+      <main className="mx-auto max-w-[1600px] px-5">
+        <div className=" flex flex-col items-center justify-center space-y-8 py-12 ">
+          <p className="max-w-xl text-center md:leading-loose">
+            Let your friends know about Brither Links App! For any suggestions
+            or bugs reporting! Check the Github repository. Thanks
+          </p>
+          <div className="flex  items-center justify-center space-x-6">
+            <TwitterShare />
+            <LinkedinShare />
+            <GithubRepository />
+          </div>
+        </div>
+      </main>
 
       <footer></footer>
     </div>
