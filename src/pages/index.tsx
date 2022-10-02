@@ -20,8 +20,8 @@ const Home = ({ resources }: { resources: TResource[] }) => {
   const categoryClassname = (category: TCategory) =>
     ` ${
       active === category
-        ? "bordrer-b border-b-2 border-[#DF6F1F] py-2 text-[#DF6F1F]"
-        : "bordrer-b border-b-2 py-2"
+        ? "bordrer-b border-b-2 border-[#DF6F1F] py-2 text-[#DF6F1F] transition duration-300"
+        : "bordrer-b border-b-2 py-2 transition duration-300"
     }`;
 
   const filtredResources = resources.filter(
