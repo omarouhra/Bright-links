@@ -10,7 +10,7 @@ const ResourceCard = ({ name, link, image }: TResource) => {
       rel="noopener noreferrer"
       className="md:w-full"
     >
-      <div className="space-y-[0.937rem] rounded-lg px-[1.875rem] py-2.5 hover:shadow-md md:flex md:flex-row-reverse md:items-center md:justify-between md:py-5">
+      <div className="space-y-[0.937rem] rounded-lg border px-[1.875rem] py-2.5 transition duration-500 md:flex md:flex-row-reverse md:items-center md:justify-between md:py-5 lg:hover:shadow-xl">
         <div className="relative h-[166px] w-[295px]">
           <Image src={image || "/image 3.png"} alt={name} sizes="100vw" fill />
         </div>

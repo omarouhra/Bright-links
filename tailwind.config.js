@@ -18,7 +18,7 @@ module.exports = {
         },
       },
       animation: {
-        spin: "spin 300s ease-out infinite",
+        spin: "spin 100s ease-out infinite",
       },
     },
   },
