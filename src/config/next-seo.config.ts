@@ -12,7 +12,7 @@ const NextSeo = {
 
     images: [
       {
-        url: "/assets/og_image.png",
+        url: "https://www.brightlinks.me/assets/og_image.png",
         alt: "Your golden library of Islamic resources",
         height: 630,
         width: 1200,
