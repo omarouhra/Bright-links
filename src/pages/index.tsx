@@ -90,8 +90,8 @@ const Home = ({ resources }: { resources: TResource[] }) => {
           </div>
         </section>
 
-        <section className="">
-          <div className="inner-container flex flex-col items-center space-y-5 py-10 px-5 md:justify-center">
+        <section className="px-5">
+          <div className="inner-container grid grid-cols-1   gap-8 py-12 md:grid-cols-2 md:gap-12 ">
             {filtredResources?.map((props) => (
               <ResourceCard {...props} key={props.id} />
             ))}
