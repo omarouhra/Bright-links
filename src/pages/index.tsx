@@ -13,16 +13,16 @@ import Logo from "@/components/Logo";
 import type { TResource } from "@/types/resource";
 
 const Home = ({ resources }: { resources: TResource[] }) => {
-  const [activeBox, setActiveBox] = useState<
+  const [active, setActive] = useState<
     "Videos" | "Websites" | "Apps" | "Podcasts"
   >("Videos");
 
   return (
     <>
       <main>
-        <section className="bg-[#EEEEEE] px-5">
+        <section className="bg-[#ececec] px-5 shadow-lg">
           <div className="inner-container relative">
-            <div className="invisible absolute top-0 -right-1/3 opacity-40 lg:right-0 xl:visible">
+            <div className="absolute top-0 -right-1/3 hidden lg:right-0 xl:inline-block">
               <LogoMask />
             </div>
 
@@ -51,12 +51,46 @@ const Home = ({ resources }: { resources: TResource[] }) => {
               </div>
 
               <div className="mt-12 flex space-x-8 text-base font-normal md:space-x-12 md:text-xl">
-                <button className="bordrer-b border-b-2 border-[#DF6F1F] py-2">
+                <button
+                  onClick={() => setActive("Videos")}
+                  className={
+                    active === "Videos"
+                      ? "bordrer-b border-b-2 border-[#DF6F1F] py-2 text-[#DF6F1F]"
+                      : "bordrer-b border-b-2 py-2"
+                  }
+                >
                   Videos
                 </button>
-                <button className="py-2">Websites</button>
-                <button className="py-2">Apps</button>
-                <button className="py-2">Poadcast</button>
+                <button
+                  onClick={() => setActive("Websites")}
+                  className={
+                    active === "Websites"
+                      ? "bordrer-b border-b-2 border-[#DF6F1F] py-2 text-[#DF6F1F]"
+                      : "bordrer-b border-b-2 py-2"
+                  }
+                >
+                  Websites
+                </button>
+                <button
+                  onClick={() => setActive("Apps")}
+                  className={
+                    active === "Apps"
+                      ? "bordrer-b border-b-2 border-[#DF6F1F] py-2 text-[#DF6F1F]"
+                      : "bordrer-b border-b-2 py-2"
+                  }
+                >
+                  Apps
+                </button>
+                <button
+                  onClick={() => setActive("Podcasts")}
+                  className={
+                    active === "Podcasts"
+                      ? "bordrer-b border-b-2 border-[#DF6F1F] py-2 text-[#DF6F1F]"
+                      : "bordrer-b border-b-2 py-2"
+                  }
+                >
+                  Poadcast
+                </button>
               </div>
             </div>
           </div>

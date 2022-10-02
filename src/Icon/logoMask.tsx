@@ -4,7 +4,7 @@ function LogoMask() {
   return (
     <svg
       width="623"
-      height="645"
+      height="635"
       viewBox="0 0 623 645"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
