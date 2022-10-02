@@ -99,7 +99,7 @@ const Home = ({ resources }: { resources: TResource[] }) => {
         </section>
 
         <section className="mx-auto max-w-[1600px] px-5">
-          <div className=" flex flex-col items-center justify-center space-y-8 py-12 ">
+          <div className=" flex flex-col items-center justify-center space-y-8 py-24 ">
             <p className="max-w-xl text-center md:leading-loose">
               Let your friends know about Brither Links App! For any suggestions
               or bugs reporting! Check the Github repository. Thanks
@@ -114,15 +114,20 @@ const Home = ({ resources }: { resources: TResource[] }) => {
         </section>
       </main>
 
-      <footer className="mx-auto  max-w-[1600px] space-y-12 px-5 py-12 text-center">
-        <p className="italic text-[#DF6F1F]">
-          This app is for the sake of{" "}
-          <span className="font-semibold">Allah</span> and the Good of the
-          Ummah!
-        </p>
+      <footer className="relative  overflow-y-hidden px-5 pt-24 pb-8 text-center">
+        <div className="grascale absolute -bottom-[400px] -left-[300px] animate-spin opacity-20">
+          <LogoMask />
+        </div>
+        <div className=" mx-auto  max-w-[1600px] space-y-12">
+          <p className="italic text-[#DF6F1F]">
+            This app is for the sake of{" "}
+            <span className="font-semibold">Allah</span> and the Good of the
+            Ummah!
+          </p>
 
-        <div className="grayscale">
-          <Logo />
+          <div className="grayscale">
+            <Logo />
+          </div>
         </div>
       </footer>
     </>
