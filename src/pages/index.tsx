@@ -14,8 +14,10 @@ import type { TResource } from "@/types/resource";
 
 const Home = ({ resources }: { resources: TResource[] }) => {
   const [active, setActive] = useState<
-    "Videos" | "Websites" | "Apps" | "Podcasts"
-  >("Videos");
+    "videos" | "websites" | "apps" | "podcasts"
+  >("videos");
+
+  console.log(resources);
 
   return (
     <>
@@ -52,9 +54,9 @@ const Home = ({ resources }: { resources: TResource[] }) => {
 
               <div className="mt-12 flex space-x-8 text-base font-normal md:space-x-12 md:text-xl">
                 <button
-                  onClick={() => setActive("Videos")}
+                  onClick={() => setActive("videos")}
                   className={
-                    active === "Videos"
+                    active === "videos"
                       ? "bordrer-b border-b-2 border-[#DF6F1F] py-2 text-[#DF6F1F]"
                       : "bordrer-b border-b-2 py-2"
                   }
@@ -62,9 +64,9 @@ const Home = ({ resources }: { resources: TResource[] }) => {
                   Videos
                 </button>
                 <button
-                  onClick={() => setActive("Websites")}
+                  onClick={() => setActive("websites")}
                   className={
-                    active === "Websites"
+                    active === "websites"
                       ? "bordrer-b border-b-2 border-[#DF6F1F] py-2 text-[#DF6F1F]"
                       : "bordrer-b border-b-2 py-2"
                   }
@@ -72,9 +74,9 @@ const Home = ({ resources }: { resources: TResource[] }) => {
                   Websites
                 </button>
                 <button
-                  onClick={() => setActive("Apps")}
+                  onClick={() => setActive("apps")}
                   className={
-                    active === "Apps"
+                    active === "apps"
                       ? "bordrer-b border-b-2 border-[#DF6F1F] py-2 text-[#DF6F1F]"
                       : "bordrer-b border-b-2 py-2"
                   }
@@ -82,9 +84,9 @@ const Home = ({ resources }: { resources: TResource[] }) => {
                   Apps
                 </button>
                 <button
-                  onClick={() => setActive("Podcasts")}
+                  onClick={() => setActive("podcasts")}
                   className={
-                    active === "Podcasts"
+                    active === "podcasts"
                       ? "bordrer-b border-b-2 border-[#DF6F1F] py-2 text-[#DF6F1F]"
                       : "bordrer-b border-b-2 py-2"
                   }
