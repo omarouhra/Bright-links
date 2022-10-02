@@ -4,6 +4,6 @@
 
 @layer components {
   .inner-container {
-    @apply mx-auto max-w-[1600px];
+    @apply mx-auto max-w-[1500px];
   }
 }

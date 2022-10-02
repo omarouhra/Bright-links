@@ -98,7 +98,7 @@ const Home = ({ resources }: { resources: TResource[] }) => {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1600px] px-5">
+        <section className="mx-auto  px-5">
           <div className=" flex flex-col items-center justify-center space-y-8 py-24 ">
             <p className="max-w-xl text-center md:leading-loose">
               Let your friends know about Brither Links App! For any suggestions
