@@ -12,7 +12,13 @@ const ResourceCard = ({ name, link, image }: TResource) => {
     >
       <div className="space-y-[0.937rem] rounded-lg border px-[1.875rem] py-2.5 transition duration-500 md:flex md:flex-row-reverse md:items-center md:justify-between md:py-5 lg:hover:shadow-xl">
         <div className="relative h-[166px] w-[295px]">
-          <Image src={image || "/image 3.png"} alt={name} sizes="100vw" fill />
+          <Image
+            src={image || "/image 3.png"}
+            alt={name}
+            sizes="100vw"
+            fill
+            className="object-cover"
+          />
         </div>
 
         <div className="text-left md:space-y-1">
