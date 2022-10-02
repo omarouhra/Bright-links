@@ -44,7 +44,7 @@ const Home = ({ resources }: { resources: TResource[] }) => {
               <div className="flex flex-col items-start justify-center py-8 md:py-16 ">
                 <div className="py- space-y-[3.125rem]">
                   <div className="space-y-5">
-                    <h1 className="max-w-2xl text-4xl font-light leading-relaxed md:text-6xl md:leading-normal">
+                    <h1 className="max-w-2xl text-3xl font-light leading-relaxed md:text-6xl md:leading-normal">
                       Your golden library of{" "}
                       <span className="bg-gradient-to-r from-[#DF6F1F] to-[#FFE5A4] bg-clip-text font-bold text-transparent">
                         Islamic
@@ -52,7 +52,7 @@ const Home = ({ resources }: { resources: TResource[] }) => {
                       resources
                     </h1>
 
-                    <p className="max-w-2xl text-base font-light text-gray-800 md:text-lg">
+                    <p className="max-w-sm text-sm font-light text-gray-800 md:max-w-2xl md:text-lg">
                       Brighter path, is an app where you can find different
                       resources to learn more about your deen!
                     </p>
