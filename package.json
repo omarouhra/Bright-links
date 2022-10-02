@@ -1,6 +1,6 @@
 {
-  "name": "islamic-path",
-  "version": "0.1.0",
+  "name": "bright-links",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
