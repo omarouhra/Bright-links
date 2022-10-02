@@ -12,12 +12,21 @@ import Logo from "@/components/Logo";
 
 import type { TResource } from "@/types/resource";
 
-const Home = ({ resources }: { resources: TResource[] }) => {
-  const [active, setActive] = useState<
-    "videos" | "websites" | "apps" | "podcasts"
-  >("videos");
+type TCategory = "video" | "website" | "app" | "podcast";
 
-  console.log(resources);
+const Home = ({ resources }: { resources: TResource[] }) => {
+  const [active, setActive] = useState<TCategory>("video");
+
+  const categoryClassname = (category: TCategory) =>
+    ` ${
+      active === category
+        ? "bordrer-b border-b-2 border-[#DF6F1F] py-2 text-[#DF6F1F]"
+        : "bordrer-b border-b-2 py-2"
+    }`;
+
+  const filtredResources = resources.filter(
+    (resource) => resource.category === active
+  );
 
   return (
     <>
@@ -54,42 +63,26 @@ const Home = ({ resources }: { resources: TResource[] }) => {
 
               <div className="mt-12 flex space-x-8 text-base font-normal md:space-x-12 md:text-xl">
                 <button
-                  onClick={() => setActive("videos")}
-                  className={
-                    active === "videos"
-                      ? "bordrer-b border-b-2 border-[#DF6F1F] py-2 text-[#DF6F1F]"
-                      : "bordrer-b border-b-2 py-2"
-                  }
+                  onClick={() => setActive("video")}
+                  className={categoryClassname("video")}
                 >
                   Videos
                 </button>
                 <button
-                  onClick={() => setActive("websites")}
-                  className={
-                    active === "websites"
-                      ? "bordrer-b border-b-2 border-[#DF6F1F] py-2 text-[#DF6F1F]"
-                      : "bordrer-b border-b-2 py-2"
-                  }
+                  onClick={() => setActive("website")}
+                  className={categoryClassname("website")}
                 >
                   Websites
                 </button>
                 <button
-                  onClick={() => setActive("apps")}
-                  className={
-                    active === "apps"
-                      ? "bordrer-b border-b-2 border-[#DF6F1F] py-2 text-[#DF6F1F]"
-                      : "bordrer-b border-b-2 py-2"
-                  }
+                  onClick={() => setActive("app")}
+                  className={categoryClassname("app")}
                 >
                   Apps
                 </button>
                 <button
-                  onClick={() => setActive("podcasts")}
-                  className={
-                    active === "podcasts"
-                      ? "bordrer-b border-b-2 border-[#DF6F1F] py-2 text-[#DF6F1F]"
-                      : "bordrer-b border-b-2 py-2"
-                  }
+                  onClick={() => setActive("podcast")}
+                  className={categoryClassname("podcast")}
                 >
                   Poadcast
                 </button>
@@ -100,7 +93,7 @@ const Home = ({ resources }: { resources: TResource[] }) => {
 
         <section className="">
           <div className="inner-container flex flex-col items-center space-y-5 py-10 px-5 md:justify-center">
-            {resources?.map((props) => (
+            {filtredResources?.map((props) => (
               <ResourceCard {...props} key={props.id} />
             ))}
           </div>
