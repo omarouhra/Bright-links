@@ -1,3 +1,5 @@
+import type { TCategory } from "@/types/category";
+
 export type TResource = {
   id: number;
   created_at: Date;
@@ -5,5 +7,5 @@ export type TResource = {
   name: string;
   link: string;
   image: string;
-  category: string;
+  category: TCategory;
 };

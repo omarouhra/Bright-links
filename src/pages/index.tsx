@@ -11,8 +11,7 @@ import LogoMask from "@/Icon/logoMask";
 import Logo from "@/components/Logo";
 
 import type { TResource } from "@/types/resource";
-
-type TCategory = "video" | "website" | "app" | "podcast";
+import type { TCategory } from "@/types/category";
 
 const Home = ({ resources }: { resources: TResource[] }) => {
   const [active, setActive] = useState<TCategory>("video");
