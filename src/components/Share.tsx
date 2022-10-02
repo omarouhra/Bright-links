@@ -4,7 +4,7 @@ import TwitterIcon from "@/Icon/TwitterIcon";
 import React from "react";
 
 export const TwitterShare = () => {
-  const ShareURL = `https://twitter.com/intent/tweet?text=Ayats Wallpaper App&url=https://ayats-wallpapers.vercel.app/`;
+  const ShareURL = `https://twitter.com/intent/tweet?text=Bright Links App&url=https://www.brightlinks.me`;
   return (
     <a href={ShareURL} target="_blank" rel="noopener noreferrer">
       <TwitterIcon />
@@ -13,7 +13,7 @@ export const TwitterShare = () => {
 };
 
 export const LinkedinShare = () => {
-  const ShareURL = `https://www.linkedin.com/sharing/share-offsite/?url=https://ayats-wallpapers.vercel.app/`;
+  const ShareURL = `https://www.linkedin.com/sharing/share-offsite/?url=https://www.brightlinks.me`;
 
   return (
     <a href={ShareURL} target="_blank" rel="noopener noreferrer">
@@ -24,7 +24,11 @@ export const LinkedinShare = () => {
 
 export const GithubRepository = () => {
   return (
-    <a href={""} target="_blank" rel="noopener noreferrer">
+    <a
+      href="https://github.com/omarouhra/Bright-links"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <GithubIcon />
     </a>
   );

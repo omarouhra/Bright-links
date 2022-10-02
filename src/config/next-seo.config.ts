@@ -1,13 +1,23 @@
 const NextSeo = {
-  defaultTitle: "Islamic Path",
-  titleTemplate: "%s | Islamic Path",
-  description: "",
+  defaultTitle: "Bright Links",
+  titleTemplate: "%s | Bright Links",
+  description:
+    "Bright links, is an app where you can find different resources to learn more about your deen!",
 
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "",
-    site_name: "Islamic Path",
+    url: "https://www.brightlinks.me",
+    site_name: "Bright Links",
+
+    images: [
+      {
+        url: "/assets/og_image.png",
+        alt: "Your golden library of Islamic resources",
+        height: 630,
+        width: 1200,
+      },
+    ],
   },
 
   twitter: {
