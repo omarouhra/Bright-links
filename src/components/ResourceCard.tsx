@@ -1,6 +1,7 @@
 import Image from "next/future/image";
 
 import type { TResource } from "@/types/resource";
+import BluryImage from "./BluryImage";
 
 const ResourceCard = ({ name, link, image }: TResource) => {
   return (
@@ -12,11 +13,9 @@ const ResourceCard = ({ name, link, image }: TResource) => {
     >
       <div className="group flex flex-col items-center justify-center space-y-[0.937rem] rounded-lg border px-[1.875rem] py-2.5 transition duration-500  md:flex md:flex-row-reverse md:items-center md:justify-between md:py-5 lg:hover:shadow-xl">
         <div className="relative h-[166px] w-[295px] ">
-          <Image
-            src={image}
+          <BluryImage
             alt={name}
-            sizes="100vw"
-            fill
+            imgSrc={image}
             className="rounded-md object-cover shadow-md md:shadow-none"
           />
         </div>
@@ -25,8 +24,6 @@ const ResourceCard = ({ name, link, image }: TResource) => {
           <h3 className="text-base font-light transition duration-500 group-hover:text-[#DF6F1F] md:text-xl">
             {name}
           </h3>
-
-          {/* <p className="text-xs text-[#8A8A8A] md:text-base">+5M subsciber</p> */}
         </div>
       </div>
     </a>
