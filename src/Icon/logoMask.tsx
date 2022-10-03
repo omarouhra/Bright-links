@@ -3,36 +3,82 @@ import React from "react";
 function LogoMask() {
   return (
     <svg
-      width="623"
-      height="635"
-      viewBox="0 0 623 645"
+      width="636"
+      height="636"
+      viewBox="0 0 652 652"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M230.632 43.2353L311.5 6L392.368 43.2353V322.5V601.765L311.5 639L230.632 601.765V322.5V43.2353Z"
-        stroke="#E58538"
-        strokeWidth="10"
-        strokeLinecap="square"
+        d="M246 43.6471L326 6L406 43.6471V326V608.353L326 646L246 608.353V326V43.6471Z"
+        stroke="url(#paint0_linear_106_7)"
+        stroke-width="10"
+        stroke-linecap="square"
       />
       <path
-        d="M73.3046 181.883L104.41 96.999L186.344 64.7737L376.951 262.244L567.557 459.714L536.452 544.598L454.518 576.823L263.911 379.353L73.3046 181.883Z"
-        stroke="#E58538"
-        strokeWidth="10"
-        strokeLinecap="square"
+        d="M43.6471 406L6 326L43.6471 246L326 246H608.353L646 326L608.353 406L326 406H43.6471Z"
+        stroke="url(#paint1_linear_106_7)"
+        stroke-width="10"
+        stroke-linecap="square"
       />
       <path
-        d="M439.786 60.4643L522.101 93.0854L553.589 178.365L362.982 375.835L172.375 573.305L90.0593 540.684L58.572 455.404L249.179 257.934L439.786 60.4643Z"
-        stroke="#E58538"
-        strokeWidth="10"
-        strokeLinecap="square"
+        d="M469.38 69.6205L552.569 99.5685L582.517 182.758L382.863 382.411L183.209 582.065L100.02 552.117L70.0721 468.928L269.726 269.274L469.38 69.6205Z"
+        stroke="url(#paint2_linear_106_7)"
+        stroke-width="10"
+        stroke-linecap="square"
       />
       <path
-        d="M41.9412 396.971L6 313.191L41.9412 229.412L311.5 229.412H581.059L617 313.191L581.059 396.971L311.5 396.971H41.9412Z"
-        stroke="#E58538"
-        strokeWidth="10"
-        strokeLinecap="square"
+        d="M69.6205 182.62L99.5685 99.4315L182.758 69.4834L382.411 269.137L582.065 468.791L552.117 551.98L468.928 581.928L269.274 382.274L69.6205 182.62Z"
+        stroke="url(#paint3_linear_106_7)"
+        stroke-width="10"
+        stroke-linecap="square"
       />
+      <defs>
+        <linearGradient
+          id="paint0_linear_106_7"
+          x1="326"
+          y1="6"
+          x2="326"
+          y2="646"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#E58538" />
+          <stop offset="1" stop-color="#FAD08B" />
+        </linearGradient>
+        <linearGradient
+          id="paint1_linear_106_7"
+          x1="6"
+          y1="326"
+          x2="646"
+          y2="326"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#E58538" />
+          <stop offset="1" stop-color="#FAD08B" />
+        </linearGradient>
+        <linearGradient
+          id="paint2_linear_106_7"
+          x1="552.569"
+          y1="99.5685"
+          x2="100.02"
+          y2="552.117"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#E58538" />
+          <stop offset="1" stop-color="#FAD08B" />
+        </linearGradient>
+        <linearGradient
+          id="paint3_linear_106_7"
+          x1="99.5685"
+          y1="99.4315"
+          x2="552.117"
+          y2="551.98"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#E58538" />
+          <stop offset="1" stop-color="#FAD08B" />
+        </linearGradient>
+      </defs>
     </svg>
   );
 }

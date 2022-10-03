@@ -32,7 +32,7 @@ const Home = ({ resources }: { resources: TResource[] }) => {
       <main>
         <section className="bg-[#ececec] px-5 shadow-lg">
           <div className="inner-container relative">
-            <div className="absolute top-0 -right-1/3 hidden  lg:right-0 xl:inline-block">
+            <div className="absolute top-0 -right-1/3 hidden  animate-spin  lg:right-0 xl:inline-block">
               <LogoMask />
             </div>
 
