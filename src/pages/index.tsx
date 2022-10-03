@@ -53,7 +53,7 @@ const Home = ({ resources }: { resources: TResource[] }) => {
                     </h1>
 
                     <p className="max-w-sm text-sm font-light text-gray-800 md:max-w-2xl md:text-lg">
-                      Brighter path, is an app where you can find different
+                      Brighter links, is an app where you can find different
                       resources to learn more about your deen!
                     </p>
                   </div>
